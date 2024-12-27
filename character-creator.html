@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Creator - Cyclone Life</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Create Your Character</h1>
+    </header>
+
+    <main>
+        <form id="character-form">
+            <label for="name">Character Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your character's name">
+            
+            <label for="gender">Choose Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <button type="submit" id="save-btn">Save Character</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Cyclone Life. All rights reserved.</p>
+    </footer>
+
+    <script src="character-creator.js"></script>
+</body>
+</html>
