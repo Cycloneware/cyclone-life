@@ -16,11 +16,22 @@
             <h2>Your Character</h2>
             <p><strong>Name:</strong> <span id="character-name">Loading...</span></p>
             <p><strong>Gender:</strong> <span id="character-gender">Loading...</span></p>
+            <p><strong>Money:</strong> $<span id="character-money">0</span></p>
+        </div>
+
+        <div id="career-section">
+            <h2>Career</h2>
+            <p id="current-career"><strong>Current Career:</strong> <span id="career-name">Unemployed</span></p>
+            <button id="choose-career-btn">Choose a Career</button>
+            <div id="career-options" style="display: none;">
+                <button class="career-option" data-career="Software Developer" data-salary="1000">Software Developer - $1000/day</button>
+                <button class="career-option" data-career="Artist" data-salary="600">Artist - $600/day</button>
+                <button class="career-option" data-career="Teacher" data-salary="800">Teacher - $800/day</button>
+            </div>
         </div>
 
         <div id="game-actions">
-            <button id="action-btn">Perform an Action</button>
-            <p id="action-message" style="display:none;"></p>
+            <button id="work-btn" disabled>Work and Earn Money</button>
         </div>
     </main>
 
