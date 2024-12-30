@@ -74,3 +74,66 @@ button:hover {
 footer {
     margin-top: 50px;
 }
+/* Basic Styling */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 50px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+button {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    margin: 20px;
+    cursor: pointer;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+footer {
+    margin-top: 50px;
+}
+
+/* Styling Career Option Buttons */
+#career-options {
+    display: none;
+    margin-top: 20px;
+}
+
+.career-option {
+    background-color: #008CBA;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.career-option:hover {
+    background-color: #007B9A;
+}
+
+/* Styling the work button */
+#work-btn:disabled {
+    background-color: #B0BEC5;
+    cursor: not-allowed;
+}
+
+/* Action message */
+#action-message {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #333;
+    display: none;
+}
