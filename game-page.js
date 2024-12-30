@@ -1,5 +1,10 @@
 // Load character data from localStorage
-const characterData = JSON.parse(localStorage.getItem('characterData'));
+const characterData = JSON.parse(localStorage.getItem('characterData')) || {};
+
+// Initialize character data if it doesn't exist
+if (!characterData.money) {
+    characterData.money = 0;  // Default money value
+}
 
 // Display character information on the page
 const characterNameDisplay = document.getElementById('character-name');
@@ -19,7 +24,7 @@ if (characterData) {
     // Set the character name, gender, and money
     characterNameDisplay.textContent = characterData.name;
     characterGenderDisplay.textContent = characterData.gender;
-    characterMoneyDisplay.textContent = characterData.money;
+    characterMoneyDisplay.textContent = `$${characterData.money}`;
 
     // If no career is selected, display career options
     if (!characterData.career) {
@@ -28,7 +33,7 @@ if (characterData) {
     } else {
         // If career exists, display the career name and enable work button
         careerNameDisplay.textContent = characterData.career.name;
-        workButton.disabled = false;
+        workButton.disabled = false;  // Enable work button
     }
 } else {
     // If no character data is found, alert the user and redirect to character creation
@@ -75,7 +80,7 @@ workButton.addEventListener('click', () => {
     localStorage.setItem('characterData', JSON.stringify(characterData));
 
     // Update the money display
-    characterMoneyDisplay.textContent = characterData.money;
+    characterMoneyDisplay.textContent = `$${characterData.money}`;
 
     // Display an action message
     actionMessage.textContent = `You worked as a ${characterData.career.name} and earned $${characterData.career.salary}!`;
