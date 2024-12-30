@@ -22,7 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Options menu toggle
     const optionsBtn = document.getElementById('options-btn');
-    const optionsMenu = document.getElementById('options-menu');
+    const optionsMenu = document.getElementById('options-modal');
+    const closeOptionsBtn = document.getElementById('close-options-btn');
 
     // Check if character data exists
     if (characterData) {
@@ -92,13 +93,19 @@ document.addEventListener('DOMContentLoaded', () => {
         actionMessage.style.display = 'block';
     });
 
-    // Options menu toggle functionality
+    // Options menu functionality
     optionsBtn.addEventListener('click', () => {
-        // Toggle visibility of the options menu
-        if (optionsMenu.style.display === 'none') {
-            optionsMenu.style.display = 'block';
-        } else {
-            optionsMenu.style.display = 'none';
-        }
+        optionsMenu.style.display = optionsMenu.style.display === 'none' ? 'block' : 'none';
+    });
+
+    closeOptionsBtn.addEventListener('click', () => {
+        optionsMenu.style.display = 'none';
+    });
+
+    // Save game button (for demonstration purposes)
+    const saveGameBtn = document.getElementById('save-game-btn');
+    saveGameBtn.addEventListener('click', () => {
+        localStorage.setItem('characterData', JSON.stringify(characterData));
+        alert('Game saved!');
     });
 });
