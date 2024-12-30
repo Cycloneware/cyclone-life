@@ -1,5 +1,5 @@
 // Load character data from localStorage
-const characterData = JSON.parse(localStorage.getItem('characterData')) || {};
+let characterData = JSON.parse(localStorage.getItem('characterData')) || {};
 
 // Initialize character data if it doesn't exist
 if (!characterData.money) {
